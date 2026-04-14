@@ -6,7 +6,8 @@ from django.views import generic
 from django.views.generic.edit import FormMixin
 from .forms import CommentForm
 from .models import Post, Comment
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
+from django.db.models import Q
 
 # Create your views here.
 class PostListView(generic.ListView):
@@ -113,3 +114,14 @@ class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteV
 
     def test_func(self):
         return self.get_object().author == self.request.user
+
+
+def search(request):
+    query = request.GET.get('query')
+    context = {
+        'query': query,
+        'posts': Post.objects.filter(Q(title__icontains=query) |
+                                     Q(content__icontains=query) |
+                                     Q(author__username=query)),
+    }
+    return render(request, template_name="search.html", context=context)
