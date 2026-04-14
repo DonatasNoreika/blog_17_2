@@ -19,7 +19,7 @@ class PostAdmin(admin.ModelAdmin):
     readonly_fields = ['date', 'comments_count']
 
     fieldsets = [
-        ('General', {'fields': ('title', 'content', 'author')}),
+        ('General', {'fields': ('title', 'content', 'photo', 'author')}),
         ('Info', {'fields': ('date', 'comments_count')}),
     ]
 

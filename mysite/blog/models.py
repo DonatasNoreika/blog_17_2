@@ -9,6 +9,7 @@ class Post(models.Model):
     content = models.TextField(verbose_name="Turinys")
     date = models.DateTimeField(verbose_name="Data", auto_now_add=True)
     author = models.ForeignKey(to=User, verbose_name="Autorius", on_delete=models.CASCADE)
+    photo = models.ImageField('Nuotrauka', upload_to='post_photos', null=True, blank=True)
 
     class Meta:
         verbose_name = "Įrašas"

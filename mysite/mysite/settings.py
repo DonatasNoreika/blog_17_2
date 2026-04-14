@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 from .my_settings import (SECRET_KEY,
                           DEBUG,
                           ALLOWED_HOSTS,
@@ -140,3 +141,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/media')
+
+MEDIA_URL = '/media/'
