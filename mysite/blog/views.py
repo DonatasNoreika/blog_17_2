@@ -1,11 +1,12 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.models import User
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic.edit import FormMixin
 from .forms import CommentForm
 from .models import Post, Comment
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 # Create your views here.
 class PostListView(generic.ListView):
@@ -42,6 +43,16 @@ class SignUp(generic.CreateView):
     form_class = UserCreationForm
     template_name = "signup.html"
     success_url = reverse_lazy("login")
+
+
+class ProfileUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = User
+    fields = ['first_name', 'last_name', 'email']
+    template_name = "profile.html"
+    success_url = reverse_lazy('profile')
+
+    def get_object(self, queryset=None):
+        return self.request.user
 
 
 class PostCreateView(LoginRequiredMixin, generic.CreateView):
