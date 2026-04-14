@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 21:09+0300\n"
+"PO-Revision-Date: 2026-04-14 21:12+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : "
+"n%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.6\n"
+
+#: .\models.py:9 .\models.py:30
+msgid "Photo"
+msgstr "Nuotrauka"
+
+#: .\models.py:26
+msgid "Title"
+msgstr "Antraštė"
+
+#: .\models.py:27 .\models.py:48
+msgid "Content"
+msgstr "Turinys"
+
+#: .\models.py:28 .\models.py:49
+msgid "Date"
+msgstr "Data"
+
+#: .\models.py:29 .\models.py:50
+msgid "Author"
+msgstr "Autorius"
+
+#: .\models.py:33 .\models.py:47 .\templates\post.html:3
+#: .\templates\post.html:33
+msgid "Post"
+msgstr "Įrašas"
+
+#: .\models.py:34 .\templates\posts.html:3
+msgid "Posts"
+msgstr "Įrašai"
+
+#: .\models.py:40
+msgid "Comments count"
+msgstr "Komentarų skaičius"
+
+#: .\models.py:53
+msgid "Comment"
+msgstr "Komentaras"
+
+#: .\models.py:54 .\templates\posts.html:23
+msgid "Comments"
+msgstr "Komentarų"
+
+#: .\templates\base.html:13
+msgid "My Blog"
+msgstr "Mano Tinklaraštis"
+
+#: .\templates\base.html:14
+msgid "Django Demo Project!"
+msgstr "Django demo projektas!"
+
+#: .\templates\base.html:25
+msgid "HOME"
+msgstr "PRADŽIA"
+
+#: .\templates\base.html:39
+msgid "New Post"
+msgstr "Naujas įrašas"
+
+#: .\templates\base.html:44
+msgid "Logout"
+msgstr "Atsijungti"
+
+#: .\templates\base.html:50 .\templates\signup.html:3
+#: .\templates\signup.html:10
+msgid "Sign Up"
+msgstr "Registruotis"
+
+#: .\templates\base.html:53 .\templates\registration\login.html:3
+#: .\templates\registration\login.html:10
+#: .\templates\registration\password_reset_complete.html:15
+msgid "Login"
+msgstr "Prisijungti"
+
+#: .\templates\base.html:77
+msgid "Search"
+msgstr "Ieškoti"
+
+#: .\templates\comment_delete.html:3
+msgid "Comment delete"
+msgstr "Komentaro trynimas"
+
+#: .\templates\comment_delete.html:6
+msgid "Are you sure you want to delete the comment"
+msgstr "Ar tikrai norite ištrinti komentarą"
+
+#: .\templates\comment_delete.html:10 .\templates\post_delete.html:10
+msgid "YES"
+msgstr "TAIP"
+
+#: .\templates\comment_delete.html:11 .\templates\post_delete.html:11
+msgid "NO"
+msgstr "NE"
+
+#: .\templates\comment_form.html:3
+msgid "Comment create/update"
+msgstr "Komentaro sukūrimas/atnaujinimas"
+
+#: .\templates\comment_form.html:10 .\templates\post_form.html:10
+#: .\templates\profile.html:18
+msgid "Save"
+msgstr "Išsaugoti"
+
+#: .\templates\post.html:22 .\templates\post.html:46
+msgid "Edit"
+msgstr "Redaguoti"
+
+#: .\templates\post.html:23 .\templates\post.html:47
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: .\templates\post.html:27
+msgid "Comments:"
+msgstr "Komentarai:"
+
+#: .\templates\post_delete.html:3
+msgid "Post delete"
+msgstr "Įrašo trynimas"
+
+#: .\templates\post_delete.html:6
+msgid "Are you sure you want to delete the post"
+msgstr "Ar tikrai norite ištrinti įrašą"
+
+#: .\templates\post_form.html:3
+msgid "Post create/update"
+msgstr "Įrašo kūrimas/redagavimas"
+
+#: .\templates\posts.html:22
+msgid "Read More"
+msgstr "Skaityti daugiau"
+
+#: .\templates\posts.html:33 .\templates\posts.html:37
+msgid "Previous"
+msgstr "Ankstesnis"
+
+#: .\templates\posts.html:55 .\templates\posts.html:59
+msgid "Next"
+msgstr "Paskesnis"
+
+#: .\templates\profile.html:3 .\templates\profile.html:9
+msgid "My Profile"
+msgstr "Mano profilis"
+
+#: .\templates\registration\login.html:12
+msgid "Forgot Password?"
+msgstr "Pamiršote slaptažodį?"
+
+#: .\templates\registration\password_reset_complete.html:3
+#: .\templates\registration\password_reset_complete.html:11
+msgid "Password change completed"
+msgstr "Slaptažodžio keitimas įvykdytas"
+
+#: .\templates\registration\password_reset_complete.html:13
+msgid ""
+"Your password has been changed. You can now log in with your new password."
+msgstr ""
+"Jūsų slaptažodis pakeistas. Galite prisijungti naudodami naują slaptažodį."
+
+#: .\templates\registration\password_reset_confirm.html:3
+#: .\templates\registration\password_reset_form.html:3
+#: .\templates\registration\password_reset_form.html:9
+msgid "Password change"
+msgstr "Slaptažodžio keitimas"
+
+#: .\templates\registration\password_reset_confirm.html:9
+msgid "Enter a new password and repeat it."
+msgstr "Įveskite naują slaptažodį ir pakartokite."
+
+#: .\templates\registration\password_reset_confirm.html:14
+msgid "Change password"
+msgstr "Slaptažodžio keitimas"
+
+#: .\templates\registration\password_reset_done.html:3
+#: .\templates\registration\password_reset_done.html:11
+msgid "Check your email"
+msgstr "Patikrinkite el. paštą"
+
+#: .\templates\registration\password_reset_done.html:13
+msgid ""
+"If an account exists with the specified email address, you will soon receive "
+"an email with a password change link."
+msgstr ""
+"Jei jūsų paskyra šiuo el. paštu egzistuoja, gausite el. laišką su "
+"slaptažodžio keitimo nuoroda."
+
+#: .\templates\registration\password_reset_email.html:2
+msgid ""
+"\n"
+"Hello,\n"
+"\n"
+"Someone sent us a password reset request. If it was you, please follow the "
+"link below:\n"
+msgstr ""
+"\n"
+"Sveiki,\n"
+"\n"
+"Kažkas atsiuntė mums slaptažodžio keitimo užklausą. Jei tai buvote jūs, "
+"spauskite nuorodą žemiau:\n"
+
+#: .\templates\registration\password_reset_form.html:14
+msgid "Send password change email"
+msgstr "Siųsti slaptažodžio keitimo el. laišką"
+
+#: .\templates\search.html:3 .\templates\search.html:7
+msgid "Search Results"
+msgstr "Paieškos rezultatai"
+
+#: .\templates\search.html:8
+msgid "Search results by query"
+msgstr "Paieškos rezultatai pagal užklausą"

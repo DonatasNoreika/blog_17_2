@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-
-{% block title %}Vartotojo profilis{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'My Profile' %}{% endblock %}
 
 {% block content %}
 {% if user.photo %}
 <img src="{{ user.photo.url }}" class="rounded-circle">
 {% endif %}
-<h1>Vartotojo profilis</h1>
+<h1>{% trans 'My Profile' %}</h1>
 <p>{{ user.first_name }}</p>
 <p>{{ user.last_name }}</p>
 <p>{{ user.email }}</p>
@@ -15,7 +15,7 @@
     {% csrf_token %}
     {% load crispy_forms_tags %}
     {{ form | crispy }}
-    <button type="submit" class="btn btn-primary">Atnaujinti</button>
+    <button type="submit" class="btn btn-primary">{% trans 'Save' %}</button>
 </form>
 
 {% endblock %}

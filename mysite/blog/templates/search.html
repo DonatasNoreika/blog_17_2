@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-
-{% block title %}Paieškos rezultatai{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Search Results' %}{% endblock %}
 
 {% block content %}
 
-<h1>Paieškos rezultatai</h1>
-<p>Įrašai, rasti pagal raktažodį "{{ query }}"?</p>
+<h1>{% trans 'Search Results' %}</h1>
+<p>{% trans 'Search results by query' %} "{{ query }}"?</p>
 {% for post in posts %}
 <p><a href="{% url 'post' post.pk %}">{{ post.title }}</a></p>
 {% endfor %}

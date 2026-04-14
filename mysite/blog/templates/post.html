@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
-{% block title %}Įrašas{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Post' %}{% endblock %}
 
 {% block content %}
 
@@ -19,18 +19,18 @@
         <p>{{ post.content }}</p>
         {% if post.author == user %}
         <div>
-            <a href="{% url 'post_update' post.pk %}" class="btn btn-warning">Redaguoti</a>
-            <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger">Ištrinti</a>
+            <a href="{% url 'post_update' post.pk %}" class="btn btn-warning">{% trans 'Edit' %}</a>
+            <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger">{% trans 'Delete' %}</a>
         </div>
         {% endif %}
         <hr>
-        <h5>Komentarai:</h5>
+        <h5>{% trans 'Comments:' %}</h5>
         {% if user.is_authenticated %}
         <form method="post" class="mb-2">
             {% csrf_token %}
             {% load crispy_forms_tags %}
             {{ form | crispy }}
-            <button type="submit" class="btn btn-primary">Paskelbti</button>
+            <button type="submit" class="btn btn-primary">{% trans 'Post' %}</button>
         </form>
         {% endif %}
         {% for comment in post.comments.all %}
@@ -43,8 +43,8 @@
             </div>
             <p>{{ comment.content }}</p>
             {% if comment.author == user %}
-            <a class="btn btn-warning" href="{% url 'comment_update' comment.pk %}">Redaguoti</a>
-            <a class="btn btn-danger" href="{% url 'comment_delete' comment.pk %}">Ištrinti</a>
+            <a class="btn btn-warning" href="{% url 'comment_update' comment.pk %}">{% trans 'Edit' %}</a>
+            <a class="btn btn-danger" href="{% url 'comment_delete' comment.pk %}">{% trans 'Delete' %}</a>
             {% endif %}
         </div>
         {% endfor %}

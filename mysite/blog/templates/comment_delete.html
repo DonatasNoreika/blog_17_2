@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
-
-{% block title %}Komentaro trynimas{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Comment delete' %}{% endblock %}
 
 {% block content %}
-<p>Ar tikrai norite ištrinti komentarą "{{ comment.content }}"?</p>
+<p>{% trans 'Are you sure you want to delete the comment' %} "{{ comment.content }}"?</p>
 <form method="post">
     {% csrf_token %}
     {% load crispy_forms_tags %}
-    <button type="submit" class="btn btn-primary">TAIP</button>
-    <a class="btn btn-secondary" href="{% url 'post' comment.post.pk %}">NE</a>
+    <button type="submit" class="btn btn-primary">{% trans 'YES' %}</button>
+    <a class="btn btn-secondary" href="{% url 'post' comment.post.pk %}">{% trans 'NO' %}</a>
 </form>
 
 {% endblock %}
